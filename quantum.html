@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantum Time Reversal</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00FF00;
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    h1 {
+      color: #00FFFF;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #111;
+      color: #00FF00;
+      border: 2px solid #00FF00;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00FF00;
+      color: #000;
+    }
+
+    #log {
+      margin-top: 40px;
+      font-size: 16px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quantum Time Reversal Protocol</h1>
+  <p>Do not press the button unless you're ready for scientific truth.</p>
+  <button onclick="runExperiment()">RUN EXPERIMENT</button>
+
+  <div id="log"></div>
+
+  <script>
+    function runExperiment() {
+      const steps = [
+        "⏳ Starting quantum field analysis...",
+        "🔬 Measuring spin of particles...",
+        "⚡ Charging electrons using banana energy...",
+        "🧠 Connecting to Einstein's brain via WiFi...",
+        "💾 Downloading gravity data from Google Drive...",
+        "🛰️ Contacting Mars for backup plan...",
+        "🌪️ Reversing time using a fan...",
+        "🦠 Splitting an atom with a spoon...",
+        "📡 Sending results to NASA (but they're offline)...",
+        "🧃 Mixing quantum juice with tea..."
+      ];
+
+      const log = document.getElementById("log");
+      log.innerText = "";
+      let i = 0;
+
+      const interval = setInterval(() => {
+        if (i < steps.length) {
+          log.innerText += steps[i] + "\n";
+          i++;
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            log.innerText += "\n✅ Experiment Complete:\n\n😵‍💫 Final Result: YOU are not human...\n\nYou're a misunderstood mango with WiFi problems 🥭📶💀";
+          }, 1500); 
+        }
+      }, 1500); 
+    }
+  </script>
+
+</body>
+</html>
